@@ -56,7 +56,7 @@ Obbiettivo::Obbiettivo(int x, int y) {
     this->y= y;
     texture.loadFromFile("PreciousOne.png");
     sprite.setTexture(texture);
-    sprite.scale(0.06,0.06);
+    sprite.scale(0.05,0.05);
     sprite.setPosition(y*TILE,x*TILE);
 
 }
