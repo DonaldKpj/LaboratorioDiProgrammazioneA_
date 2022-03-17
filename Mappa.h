@@ -1,7 +1,3 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
-
 #ifndef LABORATORIODIPROGRAMMAZIONEA__MAPPA_H
 #define LABORATORIODIPROGRAMMAZIONEA__MAPPA_H
 
@@ -17,6 +13,7 @@ using namespace std;
 using namespace sf;
 
 class Mappa {
+
 private:
     Texture tex;
     VertexArray m_vertices;
@@ -28,6 +25,7 @@ private:
     Mappa(int dim);
     Mappa(char x);
     vector<int>type;
+
 public:
     static Mappa&crea(int dim =rand()%3 );
     static Mappa&crea(char x);

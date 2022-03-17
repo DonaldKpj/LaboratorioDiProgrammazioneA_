@@ -1,6 +1,4 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
+
 
 #include <iostream>
 #include "Personaggio.h"
@@ -12,16 +10,12 @@ int Personaggio::getY() const {
     return y;
 }
 
-
 int Personaggio::getX() const {
     return x;
 }
 
-
 void Personaggio::DisegnaPersonaggio(RenderWindow &window) {
     window.draw(sprite);
-
-
 }
 
 void Personaggio::setPos(int x, int y) {
@@ -36,6 +30,7 @@ void Personaggio::setPos() {
         Personaggio::sprite.setPosition(coordinate[index++]);
 }
 
+
 Personaggio::Personaggio() {
     int xi;
     int yi;
@@ -45,7 +40,6 @@ Personaggio::Personaggio() {
     }while (Mappa::crea().getTiles(xi,yi) >= 9);
     this->x=xi;
     this->y=yi;
-
 
     texture.loadFromFile("Gollum.png");
     sprite.setTexture(texture);

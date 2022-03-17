@@ -1,6 +1,3 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
 
 
 #include "MapSearchNode.h"
@@ -27,8 +24,7 @@ void MapSearchNode::PrintNodeInfo(){
     cout << str;
 }
 
-// Here's the heuristic function that estimates the distance from a Node
-// to the Goal.
+// Stima della distanza da un nodo al goal
 
 float MapSearchNode::GoalDistanceEstimate( MapSearchNode &nodeGoal ){
     return abs(x - nodeGoal.x) + abs(y - nodeGoal.y);
@@ -40,10 +36,8 @@ bool MapSearchNode::IsGoal( MapSearchNode &nodeGoal ){
     return false;
 }
 
-// This generates the successors to the given Node. It uses a helper function called
-// AddSuccessor to give the successors to the AStar class. The A* specific initialisation
-// is done for each node internally, so here you just set the state information that
-// is specific to the application
+
+// Genera il successore di un nodo dato usando AddSuccessor, una funzione helper della classe A*
 bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node ){
     int parent_x = -1;
     int parent_y = -1;
@@ -57,7 +51,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
 
     MapSearchNode NewNode;
 
-    // push each possible move except allowing the search to go backwards
+    // "prova" ogni possibile mossa eccetto il backwardw
 
     if( (Mappa::crea().GetMap( x-1, y ) < 9)
         && !((parent_x == x-1) && (parent_y == y))
@@ -95,9 +89,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
     return true;
 }
 
-// given this node, what does it cost to move to successor. In the case
-// of our map the answer is the map terrain value at this node since that is
-// conceptually where we're moving
+// Il costo dei movimenti è dato dal tipo di terreno della mappa
 
 float MapSearchNode::GetCost( MapSearchNode &successor ){
     return (float)Mappa::crea().GetMap( x, y );

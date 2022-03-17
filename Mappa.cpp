@@ -1,11 +1,7 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
-
 #include "Mappa.h"
 #include <sstream>
-#include <iostream>
-#include <fstream>
+//#include <iostream>
+//#include <fstream>
 #include <cstdlib>
 
 #define TILE 32

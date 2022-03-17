@@ -22,8 +22,7 @@ Schermo::Schermo() {
     view.setCenter(Mappa::crea().getRows()*TILE/2, Mappa::crea().getColumns()*TILE/2);
     window.create(VideoMode(800,600),"Algoritmo A*");
     window.setFramerateLimit(60); //Limit the framerate to a maximum fixed frequenc,Parameters: Framerate limit, in frames per seconds
-    //sf::WindowHandle handle = window.getSystemHandle(); //Get the OS-specific handle of the window
-    //sf::Window window(handle);
+
 }
 
 void Schermo::generaSchermo(Obbiettivo obbiettivo) {
@@ -101,41 +100,6 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
             SearchSteps++;
 
-#if DEBUG_LISTS
-
-            cout << "Steps:" << SearchSteps << "\n";
-
-                int len = 0;
-
-                cout << "Open:\n";
-                MapSearchNode *p = astarsearch.GetOpenListStart();
-                while( p )
-                {
-                    len++;
-#if !DEBUG_LIST_LENGTHS_ONLY
-                    ((MapSearchNode *)p)->PrintNodeInfo();
-#endif
-                    p = astarsearch.GetOpenListNext();
-
-                }
-
-                cout << "Open list has " << len << " nodes\n";
-
-                len = 0;
-
-                cout << "Closed:\n";
-                p = astarsearch.GetClosedListStart();
-                while( p )
-                {
-                    len++;
-#if !DEBUG_LIST_LENGTHS_ONLY
-                    p->PrintNodeInfo();
-#endif
-                    p = astarsearch.GetClosedListNext();
-                }
-
-                cout << "Closed list has " << len << " nodes\n";
-#endif
 
         } while (SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SEARCHING);
 
@@ -144,9 +108,6 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
             MapSearchNode *node = astarsearch.GetSolutionStart();
 
-#if DISPLAY_SOLUTION
-            cout << "Displaying solution\n";
-#endif
             int steps = 0;
 
             node->PrintNodeInfo();
@@ -154,17 +115,12 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
             for (;;) {
                 node = astarsearch.GetSolutionNext();
 
-
-
                 if (!node) {
                     break;
                 }
 
-
                 node->PrintNodeInfo();
                 steps++;
-
-
 
             };
 
@@ -173,7 +129,6 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
             // Once you're done with the solution you can free the nodes up
             astarsearch.FreeSolutionNodes();
-
 
         } else if (SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_FAILED) {
             cout << "Search terminated. Did not find goal state\n";
@@ -187,9 +142,7 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
         astarsearch.EnsureMemoryFreed();
 
-
     }
-
 
 }
 

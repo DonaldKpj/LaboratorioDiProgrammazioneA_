@@ -1,6 +1,4 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
+
 
 #ifndef LABORATORIODIPROGRAMMAZIONEA__PERSONAGGIO_H
 #define LABORATORIODIPROGRAMMAZIONEA__PERSONAGGIO_H
@@ -33,8 +31,6 @@ private:
     Sprite sprite;
     Texture texture;
     int index=0;
-
-
 
 
 };

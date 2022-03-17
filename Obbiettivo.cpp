@@ -1,6 +1,3 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
 
 #include "Obbiettivo.h"
 #include "Mappa.h"
@@ -22,7 +19,6 @@ Obbiettivo::Obbiettivo() {
 }
 
 Obbiettivo::~Obbiettivo() {
-
 }
 
 int Obbiettivo::getX() const {

@@ -1,6 +1,4 @@
-//
-// Created by Donald Kapaj on 16/03/2022.
-//
+
 
 #ifndef LABORATORIODIPROGRAMMAZIONEA__SCHERMO_H
 #define LABORATORIODIPROGRAMMAZIONEA__SCHERMO_H
@@ -24,7 +22,7 @@ private:
     View view; //a camera in the 2D scene
     Time times; //encapsulates a time value in a flexible way
     Clock clock;// a lightweight class for measuring time.
-    bool eseguito=false;
+    bool eseguito = false;
 public:
     void setEseguito(bool eseguito);
 
