@@ -28,28 +28,20 @@ Schermo::Schermo() {
 void Schermo::generaSchermo(Obbiettivo obbiettivo) {
 
     while (window.isOpen()) {
-
         while (window.pollEvent(event)) { //Pop the event on top of the event queue, if any, and return it.
-
             if (event.type == sf::Event::Closed)
                 window.close();
         }
 
         window.setView(view); //Change the current active view
-
         window.setActive(); //Activate or deactivate the window as the current target for OpenGL rendering.
-
-
         window.clear();
-
         Mappa::crea().DisegnaMappa(window);
-
         obbiettivo.drawPersonaggio(window);
 
         if (!eseguito)
             Astar(obbiettivo);
         this->setEseguito(true);
-
 
         times=clock.getElapsedTime(); //returns the time elapsed since the last call to restart()
 
@@ -59,9 +51,7 @@ void Schermo::generaSchermo(Obbiettivo obbiettivo) {
         }
 
         Personaggio::crea().DisegnaPersonaggio(window);
-
         window.display();
-
     }
 
 }
@@ -71,7 +61,6 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
     AStarSearch<MapSearchNode> astarsearch;
 
     unsigned int SearchCount = 0;
-
     const unsigned int NumSearches = 1;
 
     while (SearchCount < NumSearches) {
@@ -89,7 +78,6 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
         cout << "Punto di arrivo (" << nodeEnd.x << "," << nodeEnd.y << ")" << endl;
 
         // Set Start and goal states
-
         astarsearch.SetStartAndGoalStates(nodeStart, nodeEnd);
 
         unsigned int SearchState;
@@ -97,33 +85,22 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
         do {
             SearchState = astarsearch.SearchStep();
-
             SearchSteps++;
-
-
         } while (SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SEARCHING);
 
         if (SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SUCCEEDED) {
             cout << "Search found goal state\n";
-
             MapSearchNode *node = astarsearch.GetSolutionStart();
-
             int steps = 0;
-
             node->PrintNodeInfo();
-
             for (;;) {
                 node = astarsearch.GetSolutionNext();
-
                 if (!node) {
                     break;
                 }
-
                 node->PrintNodeInfo();
                 steps++;
-
-            };
-
+            }
 
             cout << "Solution steps " << steps << endl;
 
@@ -132,18 +109,14 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
 
         } else if (SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_FAILED) {
             cout << "Search terminated. Did not find goal state\n";
-
         }
 
         // Display the number of loops the search went through
         cout << "SearchSteps : " << SearchSteps << "\n";
 
         SearchCount++;
-
         astarsearch.EnsureMemoryFreed();
-
     }
-
 }
 
 void Schermo::setEseguito(bool eseguito) {

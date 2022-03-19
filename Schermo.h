@@ -12,13 +12,6 @@
 using namespace sf;
 
 class Schermo {
-public:
-
-    Schermo();
-    ~Schermo();
-    void generaSchermo(Obbiettivo obbiettivo);
-    void Astar( Obbiettivo obbiettivo);
-    void setEseguito(bool eseguito);
 
 private:
     View view; //a camera in the 2D scene
@@ -27,6 +20,13 @@ private:
     bool eseguito = false;
     sf::Event event; //holds all the informations about a system event that just happened
     sf::RenderWindow window; //is the main class of the Graphics module
+
+public:
+    Schermo();
+    ~Schermo();
+    void generaSchermo(Obbiettivo obbiettivo);
+    void Astar( Obbiettivo obbiettivo);
+    void setEseguito(bool eseguito);
 
 
 

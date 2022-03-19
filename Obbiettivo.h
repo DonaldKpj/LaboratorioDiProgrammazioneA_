@@ -10,14 +10,14 @@ using namespace sf;
 
 
 class Obbiettivo {
+
 public:
     Obbiettivo();
     Obbiettivo(int x, int y);
-
     void drawPersonaggio(RenderWindow &window);
     int getX() const;
-    void setX(int x);
     int getY() const;
+    void setX(int x);
     void setY(int y);
     void setpos(int x, int y);
 

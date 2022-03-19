@@ -12,13 +12,12 @@ using namespace std;
 class Personaggio {
 
 private:
+    int x, y;
     Personaggio();
     Personaggio(int x, int y);
-    int x;
-    int y;
-    vector<Vector2f> coordinate;
     Sprite sprite;
     Texture texture;
+    vector<Vector2f> coordinate;
     int index=0;
 
 

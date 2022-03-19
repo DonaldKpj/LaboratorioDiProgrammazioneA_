@@ -60,7 +60,6 @@ int Mappa::GetMap( int x, int y ) {
 }
 
 Mappa &Mappa::crea(int dim) {
-
     static Mappa mappa(dim);
     return mappa;
 }
@@ -83,19 +82,13 @@ bool Mappa::load() {
             sf::Vertex *quad = &m_vertices[(j + i * columns) * 4];// get a pointer to the current tile's quad
 
             quad[0].position = sf::Vector2f(j * TILE, i * TILE);
-
             quad[1].position = sf::Vector2f((j + 1) * TILE, i * TILE);
-
             quad[2].position = sf::Vector2f((j + 1) * TILE, (i + 1) * TILE);
-
             quad[3].position = sf::Vector2f(j * TILE, (i + 1) * TILE);
 
             quad[0].texCoords = sf::Vector2f(tu * TILE, tv * TILE);// define its 4 texture coordinates
-
             quad[1].texCoords = sf::Vector2f((tu + 1) * TILE, tv * TILE);
-
             quad[2].texCoords = sf::Vector2f((tu + 1) * TILE, (tv + 1) * TILE);
-
             quad[3].texCoords = sf::Vector2f(tu * TILE, (tv + 1) * TILE);
 
         }
