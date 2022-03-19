@@ -398,7 +398,6 @@ CMakeFiles/LaboratorioDiProgrammazioneA_.dir/Schermo.cpp.o: /usr/local/include/S
 CMakeFiles/LaboratorioDiProgrammazioneA_.dir/Schermo.cpp.o: /usr/local/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/LaboratorioDiProgrammazioneA_.dir/Schermo.cpp.o: /usr/local/include/SFML/Window/WindowStyle.hpp
 
-CMakeFiles/LaboratorioDiProgrammazioneA_.dir/main.cpp.o: ../Mappa.h
 CMakeFiles/LaboratorioDiProgrammazioneA_.dir/main.cpp.o: ../Obbiettivo.h
 CMakeFiles/LaboratorioDiProgrammazioneA_.dir/main.cpp.o: ../Personaggio.h
 CMakeFiles/LaboratorioDiProgrammazioneA_.dir/main.cpp.o: ../Schermo.h

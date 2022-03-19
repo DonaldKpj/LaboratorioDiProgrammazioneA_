@@ -15,6 +15,8 @@ using namespace sf;
 class Mappa {
 
 private:
+    Mappa(int dim);
+    Mappa(char x);
     Texture tex;
     VertexArray m_vertices;
     sf::RenderStates states;
@@ -22,13 +24,10 @@ private:
     int rows=0;
     int columns=0;
     vector<vector<int>>tiles;
-    Mappa(int dim);
-    Mappa(char x);
-    vector<int>type;
 
 public:
-    static Mappa&crea(int dim =rand()%3 );
     static Mappa&crea(char x);
+    static Mappa&crea(int dim =rand()%3 );
     int getColumns() const;
     int getRows() const ;
     int GetMap(int x, int y);
@@ -36,8 +35,6 @@ public:
     bool load();
     void DisegnaMappa(RenderWindow &window);
     int getTiles(int x, int y) const;
-
-
 };
 
 

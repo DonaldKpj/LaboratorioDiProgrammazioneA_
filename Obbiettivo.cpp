@@ -18,9 +18,6 @@ Obbiettivo::Obbiettivo() {
     sprite.setPosition(y*TILE,x*TILE);
 }
 
-Obbiettivo::~Obbiettivo() {
-}
-
 int Obbiettivo::getX() const {
     return x;
 }

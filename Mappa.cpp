@@ -39,7 +39,6 @@ Mappa::Mappa(int dim) {
 }
 
 void Mappa::findDimension() {
-
     rows=tiles.size();
     columns=tiles[0].size();
 }
@@ -114,7 +113,6 @@ int Mappa::getTiles(int x, int y) const {
 
 void Mappa::DisegnaMappa(RenderWindow &window) {
     window.draw(m_vertices, states);
-
 
 }
 

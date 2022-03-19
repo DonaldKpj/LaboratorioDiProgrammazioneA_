@@ -13,7 +13,7 @@ class Obbiettivo {
 public:
     Obbiettivo();
     Obbiettivo(int x, int y);
-    virtual ~Obbiettivo();
+
     void drawPersonaggio(RenderWindow &window);
     int getX() const;
     void setX(int x);
