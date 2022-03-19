@@ -18,30 +18,20 @@ Obbiettivo::Obbiettivo() {
     sprite.setPosition(y*TILE,x*TILE);
 }
 
-int Obbiettivo::getX() const {
-    return x;
-}
+int Obbiettivo::getX() const { return x; }
+int Obbiettivo::getY() const { return y; }
 
-void Obbiettivo::setX(int x) {
-    Obbiettivo::x = x;
-}
+void Obbiettivo::setX(int x) { Obbiettivo::x = x; }
 
-int Obbiettivo::getY() const {
-    return y;
-}
+void Obbiettivo::setY(int y) { Obbiettivo::y = y; }
 
-void Obbiettivo::setY(int y) {
-    Obbiettivo::y = y;
-}
 
 void Obbiettivo::setpos(int x, int y) {
     Obbiettivo::sprite.setPosition(x,y);
-
 }
 
 void Obbiettivo::drawPersonaggio(RenderWindow &window) {
     window.draw(sprite);
-
 }
 
 Obbiettivo::Obbiettivo(int x, int y) {
@@ -51,5 +41,4 @@ Obbiettivo::Obbiettivo(int x, int y) {
     sprite.setTexture(texture);
     sprite.scale(0.05,0.05);
     sprite.setPosition(y*TILE,x*TILE);
-
 }

@@ -35,6 +35,7 @@ public:
     bool load();
     void DisegnaMappa(RenderWindow &window);
     int getTiles(int x, int y) const;
+
 };
 
 
