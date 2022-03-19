@@ -9,7 +9,6 @@
 int Personaggio::getY() const {
     return y;
 }
-
 int Personaggio::getX() const {
     return x;
 }
@@ -24,12 +23,10 @@ void Personaggio::setPos(int x, int y) {
 
 }
 
-
 void Personaggio::setPos() {
     if(index!=coordinate.size())
         Personaggio::sprite.setPosition(coordinate[index++]);
 }
-
 
 Personaggio::Personaggio() {
     int xi;

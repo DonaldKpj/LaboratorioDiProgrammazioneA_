@@ -14,7 +14,6 @@ public:
     Mappa *map;
 
     MapSearchNode() { x = y = 0;}
-
     MapSearchNode( int px, int py ) { x=px; y=py;  }
 
     float GoalDistanceEstimate( MapSearchNode &nodeGoal );
@@ -22,7 +21,6 @@ public:
     bool GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node );
     float GetCost( MapSearchNode &successor );
     bool IsSameState( MapSearchNode &rhs );
-
     void PrintNodeInfo();
 
 

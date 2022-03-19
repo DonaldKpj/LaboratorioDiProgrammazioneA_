@@ -36,7 +36,6 @@ bool MapSearchNode::IsGoal( MapSearchNode &nodeGoal ){
     return false;
 }
 
-
 // Genera il successore di un nodo dato usando AddSuccessor, una funzione helper della classe A*
 bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node ){
     int parent_x = -1;

@@ -28,8 +28,6 @@ public:
     void Astar( Obbiettivo obbiettivo);
     void setEseguito(bool eseguito);
 
-
-
 };
 
 

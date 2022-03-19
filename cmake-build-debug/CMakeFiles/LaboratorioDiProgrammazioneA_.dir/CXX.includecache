@@ -26,14 +26,6 @@ stlastar.h
 Mappa.h
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
 
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.cpp
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-sstream
--
-cstdlib
--
-
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
 stdlib.h
 -
@@ -46,43 +38,15 @@ fstream
 SFML/Graphics.hpp
 -
 
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Obbiettivo.cpp
-Obbiettivo.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Obbiettivo.h
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Obbiettivo.h
 SFML/Graphics.hpp
 -
-
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.cpp
-iostream
--
-Personaggio.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
 
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
 SFML/Graphics.hpp
 -
 vector
 -
-
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Schermo.cpp
-Schermo.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Schermo.h
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-Personaggio.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
-Obbiettivo.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Obbiettivo.h
-stlastar.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/stlastar.h
-MapSearchNode.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/MapSearchNode.h
 
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Schermo.h
 SFML/Graphics.hpp
