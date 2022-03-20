@@ -9,7 +9,7 @@
 int main() {
 
     srand((unsigned int)time(NULL));
-    Personaggio p=Personaggio::crea();
+    Personaggio& p = Personaggio::crea();
     Obbiettivo o;
     Schermo schermo;
     schermo.generaSchermo(o);

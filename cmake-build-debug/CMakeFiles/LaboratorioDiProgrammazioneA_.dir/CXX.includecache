@@ -6,38 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/MapSearchNode.cpp
-MapSearchNode.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/MapSearchNode.h
-math.h
--
-iostream
--
-stlastar.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/stlastar.h
-Personaggio.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/MapSearchNode.h
-stlastar.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/stlastar.h
-Mappa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Mappa.h
-stdlib.h
--
-string
--
-vector
--
-fstream
--
-SFML/Graphics.hpp
--
-
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Obbiettivo.h
 SFML/Graphics.hpp
 -
@@ -58,12 +26,6 @@ Obbiettivo.h
 Personaggio.h
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
 
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/fsa.h
-string.h
--
-stdio.h
--
-
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/main.cpp
 iostream
 -
@@ -73,24 +35,6 @@ Schermo.h
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Schermo.h
 Personaggio.h
 /Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/Personaggio.h
-
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/stlastar.h
-iostream
--
-stdio.h
--
-assert.h
--
-algorithm
--
-set
--
-vector
--
-cfloat
--
-fsa.h
-/Users/donaldkapaj/CLionProjects/LaboratorioDiProgrammazioneA*/fsa.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h
