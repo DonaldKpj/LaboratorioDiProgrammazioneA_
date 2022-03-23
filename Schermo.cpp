@@ -36,11 +36,11 @@ void Schermo::generaSchermo(Obbiettivo obbiettivo) {
         window.setView(view); //Change the current active view
         window.setActive(); //Activate or deactivate the window as the current target for OpenGL rendering.
         window.clear();
-        Mappa::crea().DisegnaMappa(window);
+        Mappa::crea().disegnaMappa(window);
         obbiettivo.drawPersonaggio(window);
 
         if (!eseguito)
-            Astar(obbiettivo);
+            aStar(obbiettivo);
         this->setEseguito(true);
 
         times=clock.getElapsedTime(); //returns the time elapsed since the last call to restart()
@@ -50,13 +50,13 @@ void Schermo::generaSchermo(Obbiettivo obbiettivo) {
             clock.restart(); //puts the time counter back to zero
         }
 
-        Personaggio::crea().DisegnaPersonaggio(window);
+        Personaggio::crea().disegnaPersonaggio(window);
         window.display();
     }
 
 }
 
-void Schermo::Astar( Obbiettivo obbiettivo) {
+void Schermo::aStar(Obbiettivo obbiettivo) {
 
     AStarSearch<MapSearchNode> astarsearch;
 
@@ -92,13 +92,13 @@ void Schermo::Astar( Obbiettivo obbiettivo) {
             cout << "Search found goal state\n";
             MapSearchNode *node = astarsearch.GetSolutionStart();
             int steps = 0;
-            node->PrintNodeInfo();
+            node->printNodeInfo();
             for (;;) {
                 node = astarsearch.GetSolutionNext();
                 if (!node) {
                     break;
                 }
-                node->PrintNodeInfo();
+                node->printNodeInfo();
                 steps++;
             }
 

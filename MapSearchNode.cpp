@@ -10,14 +10,14 @@ using namespace std;
 
 #define TILE 32
 
-bool MapSearchNode::IsSameState( MapSearchNode &rhs ){
+bool MapSearchNode::isSameState(MapSearchNode &rhs ){
     // same state in a maze search is simply when (x,y) are the same
     if( (x == rhs.x) && (y == rhs.y) )
         return true;
     return false;
 }
 
-void MapSearchNode::PrintNodeInfo(){
+void MapSearchNode::printNodeInfo(){
     Personaggio::crea().setCoordinate(x*TILE,y*TILE);
     char str[100];
     sprintf( str, "Node position : (%d,%d)\n", x,y );
@@ -26,18 +26,18 @@ void MapSearchNode::PrintNodeInfo(){
 
 // Stima della distanza da un nodo al goal
 
-float MapSearchNode::GoalDistanceEstimate( MapSearchNode &nodeGoal ){
+float MapSearchNode::goalDistanceEstimate(MapSearchNode &nodeGoal ){
     return abs(x - nodeGoal.x) + abs(y - nodeGoal.y);
 }
 
-bool MapSearchNode::IsGoal( MapSearchNode &nodeGoal ){
+bool MapSearchNode::isGoal(MapSearchNode &nodeGoal ){
     if( (x == nodeGoal.x) && (y == nodeGoal.y) )
         return true;
     return false;
 }
 
 // Genera il successore di un nodo dato usando AddSuccessor, una funzione helper della classe A*
-bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node ){
+bool MapSearchNode::getSuccessors(AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node ){
     int parent_x = -1;
     int parent_y = -1;
 
@@ -52,7 +52,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
 
     // "prova" ogni possibile mossa eccetto il backwardw
 
-    if( (Mappa::crea().GetMap( x-1, y ) < 9)
+    if( (Mappa::crea().getMap(x - 1, y) < 9)
         && !((parent_x == x-1) && (parent_y == y))
             )
     {
@@ -60,7 +60,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
         astarsearch->AddSuccessor( NewNode );
     }
 
-    if( (Mappa::crea().GetMap( x, y-1 ) < 9)
+    if( (Mappa::crea().getMap(x, y - 1) < 9)
         && !((parent_x == x) && (parent_y == y-1))
             )
     {
@@ -68,7 +68,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
         astarsearch->AddSuccessor( NewNode );
     }
 
-    if( (Mappa::crea().GetMap( x+1, y ) < 9)
+    if( (Mappa::crea().getMap(x + 1, y) < 9)
         && !((parent_x == x+1) && (parent_y == y))
             )
     {
@@ -77,7 +77,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
     }
 
 
-    if( (Mappa::crea().GetMap( x, y+1 ) < 9)
+    if( (Mappa::crea().getMap(x, y + 1) < 9)
         && !((parent_x == x) && (parent_y == y+1))
             )
     {
@@ -90,7 +90,7 @@ bool MapSearchNode::GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapS
 
 // Il costo dei movimenti è dato dal tipo di terreno della mappa
 
-float MapSearchNode::GetCost( MapSearchNode &successor ){
-    return (float)Mappa::crea().GetMap( x, y );
+float MapSearchNode::getCost(MapSearchNode &successor ){
+    return (float) Mappa::crea().getMap(x, y);
 
 }

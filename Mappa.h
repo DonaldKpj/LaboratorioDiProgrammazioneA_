@@ -30,10 +30,10 @@ public:
     static Mappa&crea(int dim =rand()%3 );
     int getColumns() const;
     int getRows() const ;
-    int GetMap(int x, int y);
+    int getMap(int x, int y);
     void findDimension();
     bool load();
-    void DisegnaMappa(RenderWindow &window);
+    void disegnaMappa(RenderWindow &window);
     int getTiles(int x, int y) const;
 
 };

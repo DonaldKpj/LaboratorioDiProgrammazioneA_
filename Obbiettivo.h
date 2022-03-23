@@ -19,7 +19,7 @@ public:
     int getY() const;
     void setX(int x);
     void setY(int y);
-    void setpos(int x, int y);
+    void setPos(int x, int y);
 
 private:
     Sprite sprite;

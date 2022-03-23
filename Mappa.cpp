@@ -52,7 +52,7 @@ int Mappa::getColumns() const  {
 }
 
 
-int Mappa::GetMap( int x, int y ) {
+int Mappa::getMap(int x, int y ) {
     if( x < 0 || x >= rows|| y < 0 || y >= columns) {
         return 9;
     }
@@ -104,7 +104,7 @@ int Mappa::getTiles(int x, int y) const {
     return tiles[x][y];
 }
 
-void Mappa::DisegnaMappa(RenderWindow &window) {
+void Mappa::disegnaMappa(RenderWindow &window) {
     window.draw(m_vertices, states);
 
 }

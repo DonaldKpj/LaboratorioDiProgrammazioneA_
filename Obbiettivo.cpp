@@ -26,7 +26,7 @@ void Obbiettivo::setX(int x) { Obbiettivo::x = x; }
 void Obbiettivo::setY(int y) { Obbiettivo::y = y; }
 
 
-void Obbiettivo::setpos(int x, int y) {
+void Obbiettivo::setPos(int x, int y) {
     Obbiettivo::sprite.setPosition(x,y);
 }
 

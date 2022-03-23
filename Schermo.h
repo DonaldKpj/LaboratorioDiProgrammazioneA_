@@ -25,7 +25,7 @@ public:
     Schermo();
     ~Schermo();
     void generaSchermo(Obbiettivo obbiettivo);
-    void Astar( Obbiettivo obbiettivo);
+    void aStar(Obbiettivo obbiettivo);
     void setEseguito(bool eseguito);
 
 };

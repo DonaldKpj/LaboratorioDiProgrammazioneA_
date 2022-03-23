@@ -31,7 +31,7 @@ public:
     static Personaggio&crea();
     static Personaggio&crea(int x, int y);
     const vector<Vector2f> &getCoordinate() const;
-    void DisegnaPersonaggio(RenderWindow &window);
+    void disegnaPersonaggio(RenderWindow &window);
 
 
 };

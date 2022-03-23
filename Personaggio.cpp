@@ -13,7 +13,7 @@ int Personaggio::getX() const {
     return x;
 }
 
-void Personaggio::DisegnaPersonaggio(RenderWindow &window) {
+void Personaggio::disegnaPersonaggio(RenderWindow &window) {
     window.draw(sprite);
 }
 
