@@ -2,7 +2,7 @@
 #include "gtest/gtest.h"
 #include "../Mappa.h"
 #include "../Personaggio.h"
-#include "../Obiettivo.h"
+#include "../Obbiettivo.h"
 #include "../Schermo.h"
 
 TEST(DimensioneMappa,Mappatest0 ) {
@@ -27,9 +27,9 @@ ASSERT_EQ(map2.getColumns(),16) << "Mappa piccola reading problem: width not cal
 TEST(PosizionePersonaggio,check) {
 Mappa map2 = Mappa::crea(1);
 Personaggio pers = Personaggio::crea(0,15);
-Obiettivo obiettivo=Obiettivo(15, 1);
+Obbiettivo obbiettivo=Obbiettivo(15, 1);
 Schermo schermo;
-schermo.Astar(obiettivo);
+schermo.aStar(obbiettivo);
 vector<Vector2f> vec = pers.getCoordinate();
 ASSERT_EQ(vec[0].x,0);
 ASSERT_EQ(vec[0].y,15);
